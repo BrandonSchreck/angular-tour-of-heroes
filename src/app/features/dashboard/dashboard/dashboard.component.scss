@@ -1,0 +1,13 @@
+.hero-card {
+  align-items: center;
+  background-color: primary;
+  cursor: pointer;
+  display: flex;
+  height: calc(100% - 50px);
+  justify-content: center;
+  width: calc(100% - 50px);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}

@@ -1,0 +1,23 @@
+<section>
+  <h2>Hero Details</h2>
+  <form class="hero-form" [formGroup]="heroForm" (ngSubmit)="submit()">
+
+    <mat-form-field>
+      <mat-label>Hero ID</mat-label>
+      <input matInput disabled formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Hero Name</mat-label>
+      <input matInput type="text" formControlName="name">
+      <button mat-button mat-icon-button matSuffix aria-label="Clear" *ngIf="heroForm.get('name')" (click)="clear($event)">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <span class="button-group">
+      <button mat-stroked-button (click)="goBack($event)" aria-label="Go Back">Go Back</button>
+      <button mat-stroked-button aria-label="Save" color="primary" type="submit">Save</button>
+    </span>
+  </form>
+</section>

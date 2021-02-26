@@ -1,0 +1,5 @@
+<section class="mat-nav-list-container">
+  <app-hero-filter [filter]="filter"></app-hero-filter>
+  <app-hero-list [heroes]="filteredHeroes$ | async" (heroDeleteEvent)=deleteHero($event)>
+  </app-hero-list>
+</section>

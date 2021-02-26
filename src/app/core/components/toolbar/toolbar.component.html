@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+
+  <button mat-icon-button (click)="openMenu.emit()" aria-label="Navigation Links Menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span>{{title}}</span>
+
+  <span class="spacer"></span>
+
+  <!-- TODO: Implement theme changer
+  <button mat-icon-button class="color-lens-icon" aria-label="Change Website Theme">
+    <mat-icon>color_lens</mat-icon>
+  </button>
+  -->
+
+  <a class="icon" href="https://github.com/BrandonSchreck/angular-tour-of-heroes" target="_blank"
+    rel="noopener noreferrer" title="GitHub">
+    <img src="assets/images/github-icon.svg" alt="" />
+  </a>
+</mat-toolbar>

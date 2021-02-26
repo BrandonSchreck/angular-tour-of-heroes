@@ -1,0 +1,17 @@
+.spacer {
+  flex: 1 0 auto;
+}
+
+button {
+  &.active {
+    filter: brightness(110%);
+  }
+}
+
+h1 {
+  cursor: default;
+}
+
+img {
+  padding-top: 0.625rem;
+}

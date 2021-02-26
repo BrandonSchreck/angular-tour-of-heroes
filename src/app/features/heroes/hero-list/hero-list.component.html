@@ -1,0 +1,11 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let hero of heroes" [routerLink]="[hero.id]">
+    <span matLine>
+      <span class="badge">{{ hero.id }}</span>
+      <span class="title">{{ hero.name }}</span>
+    </span>
+    <button mat-icon-button>
+      <mat-icon (click)="delete(hero, $event)">delete</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-nav-list>

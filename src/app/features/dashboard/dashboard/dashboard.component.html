@@ -1,0 +1,14 @@
+<section>
+  <h2>Top Heroes</h2>
+
+  <mat-grid-list cols="4" gutterSize="3em" rowHeight="1:1">
+    <mat-grid-tile matRipple *ngFor="let hero of (heroes$ | async)">
+      <mat-card class="hero-card" [routerLink]="['/heroes', hero.id]">
+        <mat-card-content>
+          <h3>{{hero.name}}</h3>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</section>
