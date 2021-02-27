@@ -17,7 +17,7 @@
   <mat-card>
     <router-outlet></router-outlet>
   </mat-card>
-  <mat-card *ngIf="messageService.messages.length > 0">
+  <mat-card *ngIf="messageService.messages.length > 0" class="messages-card">
     <app-messages [messages]="messageService.messages" (clearMessages)="clearMessages()"></app-messages>
   </mat-card>
 </app-layout>

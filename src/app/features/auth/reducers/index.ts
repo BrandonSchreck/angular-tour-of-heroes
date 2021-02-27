@@ -5,7 +5,7 @@ import {
 } from '@ngrx/store';
 
 import { AuthApiActions } from '../actions';
-import * as fromRoot from 'src/app/reducers';
+import * as fromCore from 'src/app/core/reducers';
 import * as fromAuth from './auth.reducer';
 import * as fromLoginPage from './login-page.reducer';
 
@@ -14,7 +14,7 @@ export interface AuthState {
   loginPage: fromLoginPage.State;
 }
 
-export interface State extends fromRoot.State {
+export interface State extends fromCore.State {
   auth: AuthState;
 }
 
@@ -33,7 +33,7 @@ export const selectAuthStatusState = createSelector(
   (state: AuthState) => state.status
 );
 export const getUser = createSelector(selectAuthStatusState, fromAuth.getUser);
-export const getLoggedIn = createSelector(getUser, user => !!user);
+export const getLoggedIn = createSelector(getUser, (user) => !!user);
 
 export const selectLoginPageState = createSelector(
   selectAuthState,

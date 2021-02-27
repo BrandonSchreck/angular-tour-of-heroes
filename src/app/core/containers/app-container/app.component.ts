@@ -8,7 +8,7 @@ import { LayoutActions } from '../../actions';
 import { MessageService } from '../../services';
 
 import * as fromAuth from 'src/app/features/auth/reducers';
-import * as fromRoot from 'src/app/reducers';
+import * as fromCore from 'src/app/core/reducers';
 
 @Component({
   selector: 'app-root',
@@ -22,13 +22,13 @@ export class AppComponent {
 
   constructor(
     public messageService: MessageService,
-    private store: Store<fromRoot.State & fromAuth.State>
+    private store: Store<fromCore.State & fromAuth.State>
   ) {
     /**
      * Selectors can be applied with the `select` operator which passes the state
      * tree to the provided selector
      */
-    this.showSidenav$ = this.store.pipe(select(fromRoot.getShowSidenav));
+    this.showSidenav$ = this.store.pipe(select(fromCore.getShowSidenav));
     this.loggedIn$ = this.store.pipe(select(fromAuth.getLoggedIn));
   }
 
@@ -54,5 +54,6 @@ export class AppComponent {
   logout() {
     this.closeSidenav();
     this.store.dispatch(AuthActions.logoutConfirmation());
+    this.clearMessages();
   }
 }

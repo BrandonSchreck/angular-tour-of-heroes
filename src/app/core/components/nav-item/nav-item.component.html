@@ -1,4 +1,4 @@
-<a mat-list-item [routerLink]="routerLink" (click)="navigate.emit()">
+<a mat-list-item onclick="this.blur()" [routerLink]="routerLink" (click)="navigate.emit()">
   <mat-icon mat-list-icon>{{ icon }}</mat-icon>
   <span mat-line>
     <ng-content></ng-content>

@@ -15,7 +15,7 @@ export class HeroDetailComponent implements OnInit {
   submitted = new EventEmitter<Hero>();
 
   heroForm: FormGroup = new FormGroup({
-    id: new FormControl(''),
+    id: new FormControl({ value: '', disabled: true }),
     name: new FormControl(''),
   });
 

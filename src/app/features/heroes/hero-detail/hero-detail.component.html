@@ -4,7 +4,7 @@
 
     <mat-form-field>
       <mat-label>Hero ID</mat-label>
-      <input matInput disabled formControlName="id">
+      <input matInput formControlName="id">
     </mat-form-field>
 
     <mat-form-field>
@@ -17,7 +17,7 @@
 
     <span class="button-group">
       <button mat-stroked-button (click)="goBack($event)" aria-label="Go Back">Go Back</button>
-      <button mat-stroked-button aria-label="Save" color="primary" type="submit">Save</button>
+      <button mat-stroked-button (click)="submit()" aria-label="Save" color="primary" type="submit">Save</button>
     </span>
   </form>
 </section>
